@@ -1,12 +1,11 @@
-//variables
 const Discord = require('discord.js');
+
 const client = new Discord.Client();
 
 //termianl ready message
 client.on('ready', function (){
     console.log(`${bot.user.username} Is online!`);
 });
-//-------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //if user says "hello" the bot will reply with =
 client.on('message', msg=>{
@@ -36,8 +35,6 @@ client.on('message', msg=>{
     message.channel.send(message.author, attachment);
     
 });
-
-//-------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //if user leaves message will be displayed
 client.on('guildMemberRemove', member => {
