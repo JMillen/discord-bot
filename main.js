@@ -31,9 +31,11 @@ client.on('message', msg=>{
 
 //if user says "" the bot will reply with =
 client.on('message', msg=>{
-    const attachment = new Attachment('https://tenor.com/view/beetlejuice-beet-beetlejuice-lester-green-lester-green-beetle-gif-12561400')
-    message.channel.send(message.author, attachment);
-    
+
+    if(msg.content === ":)"){
+        const attachment = new Attachment('https://tenor.com/view/beetlejuice-beet-beetlejuice-lester-green-lester-green-beetle-gif-12561400');
+        message.channel.send(message.author, attachment);
+    }
 });
 
 //if user leaves message will be displayed
