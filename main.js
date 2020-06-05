@@ -14,16 +14,24 @@ client.on('message', msg=>{
     }
 });
 
+
+//if user says "hello" the bot will reply with =
+client.on('message', msg=>{
+    if(msg.content === "beet is"){
+        msg.reply('my lord and saviour');
+    }
+});
+
 client.on('guildMemberRemove', member => {
 
 });
 
 //member join message and auto role add
 client.on("guildMemberAdd", (member) => {
-    const channel = member.guild.channels.cache.find(channel => channel.name === "welcome");
+    const channel = member.guild.channels.cache.find(channel => channel.name === "✝-the-hub-✝");
     if(!channel) return;
 
-    channel.send(`welcome idiot, ${member}, thanks for joining!`);
+    channel.send(`Welcome brother, ${member} to the beetle juicism society!`);
 
 
   });
